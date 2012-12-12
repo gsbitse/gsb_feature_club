@@ -5,6 +5,7 @@ version = 7.x-1.0-beta1
 project = gsb_feature_club
 dependencies[] = ctools
 dependencies[] = entityreference
+dependencies[] = entity_view_mode
 dependencies[] = features
 dependencies[] = file
 dependencies[] = options
