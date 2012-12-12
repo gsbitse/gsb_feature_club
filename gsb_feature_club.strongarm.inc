@@ -22,10 +22,10 @@ function gsb_feature_club_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '12',
         ),
         'workbench_access' => array(
-          'weight' => '14',
+          'weight' => '13',
         ),
       ),
       'display' => array(),

@@ -24,7 +24,7 @@ function gsb_feature_club_node_info() {
       'base' => 'node_content',
       'description' => t('The GSB Public Club content type is used for clubs on the GSB Public web site.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );
