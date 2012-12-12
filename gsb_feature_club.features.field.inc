@@ -82,7 +82,7 @@ function gsb_feature_club_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '11',
+        'weight' => '8',
       ),
     ),
   );
@@ -258,26 +258,13 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_email',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
       'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
+      'module' => 'email',
+      'settings' => array(),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'email',
     ),
     'field_instance' => array(
       'bundle' => 'gsb_club',
@@ -287,10 +274,10 @@ function gsb_feature_club_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
+          'module' => 'email',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 7,
+          'type' => 'email_default',
+          'weight' => 15,
         ),
         'featured' => array(
           'label' => 'above',
@@ -310,20 +297,15 @@ function gsb_feature_club_field_default_fields() {
       'label' => 'Email',
       'required' => 0,
       'settings' => array(
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'text',
+        'module' => 'email',
         'settings' => array(
           'size' => '60',
         ),
-        'type' => 'text_textfield',
+        'type' => 'email_textfield',
         'weight' => '7',
       ),
     ),
@@ -416,26 +398,13 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_main_contact_email',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
       'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
+      'module' => 'email',
+      'settings' => array(),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'email',
     ),
     'field_instance' => array(
       'bundle' => 'gsb_club',
@@ -445,10 +414,10 @@ function gsb_feature_club_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
+          'module' => 'email',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 4,
+          'type' => 'email_default',
+          'weight' => 14,
         ),
         'featured' => array(
           'label' => 'above',
@@ -468,20 +437,15 @@ function gsb_feature_club_field_default_fields() {
       'label' => 'Main Contact Email',
       'required' => 0,
       'settings' => array(
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'text',
+        'module' => 'email',
         'settings' => array(
           'size' => '60',
         ),
-        'type' => 'text_textfield',
+        'type' => 'email_textfield',
         'weight' => '4',
       ),
     ),
