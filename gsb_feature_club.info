@@ -5,6 +5,7 @@ php = 5.2.4
 version = 7.x-1.0
 project = gsb_feature_club
 dependencies[] = ctools
+dependencies[] = email
 dependencies[] = entity_view_mode
 dependencies[] = entityreference
 dependencies[] = features
