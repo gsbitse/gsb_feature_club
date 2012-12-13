@@ -50,6 +50,13 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
@@ -120,6 +127,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -199,6 +212,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'image',
@@ -272,6 +291,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'email',
@@ -346,6 +371,13 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -412,6 +444,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'email',
@@ -486,6 +524,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '7',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
@@ -565,6 +609,12 @@ function gsb_feature_club_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'clubby' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '5',
+        ),
         'default' => array(
           'label' => 'above',
           'module' => 'text',
