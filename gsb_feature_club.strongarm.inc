@@ -13,20 +13,6 @@ function gsb_feature_club_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'entity_view_modes';
-  $strongarm->value = array(
-    'node' => array(
-      'clubby' => array(
-        'label' => 'Clubby',
-        'custom settings' => 1,
-      ),
-    ),
-  );
-  $export['entity_view_modes'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__gsb_club';
   $strongarm->value = array(
     'view_modes' => array(
