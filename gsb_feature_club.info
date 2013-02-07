@@ -13,6 +13,7 @@ dependencies[] = entityreference
 dependencies[] = facetapi
 dependencies[] = features
 dependencies[] = file
+dependencies[] = gsb_search_server
 dependencies[] = image
 dependencies[] = options
 dependencies[] = page_manager
