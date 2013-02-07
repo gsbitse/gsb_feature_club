@@ -76,4 +76,5 @@ features[variable][] = node_options_gsb_club
 features[variable][] = node_preview_gsb_club
 features[variable][] = node_submitted_gsb_club
 features[views_view][] = search_clubs
+features[search_api_index][] = club_index
 features_exclude[dependencies][gsb_search_server] = gsb_search_server
