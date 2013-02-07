@@ -46,7 +46,6 @@ function gsb_feature_club_node_info() {
   return $items;
 }
 
-
 /**
  * Implements hook_default_search_api_index().
  */

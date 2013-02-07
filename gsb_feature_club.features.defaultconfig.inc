@@ -75,18 +75,7 @@ function gsb_feature_club_defaultconfig_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
-      'plugins' => array(
-        1 => array(
-          'name' => 'solr',
-          'settings' => NULL,
-          'not' => FALSE,
-        ),
-        2 => array(
-          'name' => 'search_api_index',
-          'settings' => NULL,
-          'not' => FALSE,
-        ),
-      ),
+      'plugins' => array(),
       'logic' => 'and',
     ),
     'panels_breadcrumbs_state' => 1,
