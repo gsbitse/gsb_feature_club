@@ -12,6 +12,7 @@ dependencies[] = entity_view_mode
 dependencies[] = entityreference
 dependencies[] = facetapi
 dependencies[] = features
+dependencies[] = gsb_search_server
 dependencies[] = file
 dependencies[] = image
 dependencies[] = options
