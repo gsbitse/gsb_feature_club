@@ -7,4 +7,6 @@ projects[email][subdir] = contrib
 projects[entity_view_mode][version] = 1.0-beta3
 projects[entity_view_mode][subdir] = contrib
 
+projects[defaultconfig][version] = 1.0-alpha9
+projects[defaultconfig][subdir] = contrib
 projects[defaultconfig][patch][1912312] = http://drupal.org/files/defaultconfig-remove-notice-1912312.patch
