@@ -63,17 +63,11 @@ function gsb_feature_club_default_search_api_index() {
       "fields" : {
         "nid" : { "type" : "integer" },
         "type" : { "type" : "string" },
-        "title" : { "type" : "text" },
-        "url" : { "type" : "uri" },
-        "status" : { "type" : "boolean" },
-        "created" : { "type" : "date" },
-        "author" : { "type" : "integer", "entity_type" : "user" },
+        "title" : { "type" : "string", "boost" : "8.0" },
         "field_club_category" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_club_description" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
-        "search_api_url" : { "type" : "uri" },
-        "search_api_viewed" : { "type" : "text" },
-        "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" }
+        "search_api_aggregation_1" : { "type" : "text", "boost" : "8.0" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -86,19 +80,35 @@ function gsb_feature_club_default_search_api_index() {
         "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_alter_add_viewed_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] }
+        "search_api_alter_add_aggregation" : {
+          "status" : 1,
+          "weight" : "0",
+          "settings" : { "fields" : { "search_api_aggregation_1" : {
+                "name" : "title-search",
+                "type" : "fulltext",
+                "fields" : [ "title" ],
+                "description" : "A Fulltext aggregation of the following fields: Title."
+              }
+            }
+          }
+        }
       },
       "processors" : {
         "search_api_case_ignore" : {
           "status" : 1,
           "weight" : "0",
-          "settings" : { "fields" : { "title" : true, "field_club_description" : true } }
+          "settings" : { "fields" : {
+              "title" : true,
+              "field_club_description" : true,
+              "search_api_aggregation_1" : true
+            }
+          }
         },
         "search_api_html_filter" : {
           "status" : 1,
           "weight" : "10",
           "settings" : {
-            "fields" : { "title" : true, "field_club_description" : true },
+            "fields" : { "field_club_description" : true, "search_api_aggregation_1" : true },
             "title" : 0,
             "alt" : 1,
             "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
@@ -108,7 +118,7 @@ function gsb_feature_club_default_search_api_index() {
           "status" : 1,
           "weight" : "20",
           "settings" : {
-            "fields" : { "title" : true, "field_club_description" : true },
+            "fields" : { "field_club_description" : true, "search_api_aggregation_1" : true },
             "spaces" : "[^[:alnum:]]",
             "ignorable" : "[\\u0027]"
           }
