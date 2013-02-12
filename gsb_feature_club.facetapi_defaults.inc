@@ -119,9 +119,9 @@ function gsb_feature_club_facetapi_default_facet_settings() {
     'widget' => 'facetapi_checkbox_links',
     'filters' => array(),
     'active_sorts' => array(
-      'active' => 'active',
-      'count' => 'count',
-      'display' => 'display',
+      'active' => 0,
+      'count' => 0,
+      'display' => 0,
       'indexed' => 0,
     ),
     'sort_weight' => array(
