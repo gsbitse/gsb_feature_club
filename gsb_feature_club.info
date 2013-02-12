@@ -12,6 +12,7 @@ dependencies[] = gsb_search_server
 dependencies[] = panopoly_core
 dependencies[] = search_api_facetapi
 dependencies[] = search_api_views
+dependencies[] = ctools_query_string_context
 datestamp = 1360276841
 features[ctools][] = facetapi:facetapi_defaults:1
 features[ctools][] = page_manager:pages_default:1
