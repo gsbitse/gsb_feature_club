@@ -34,12 +34,8 @@ function gsb_feature_club_default_page_manager_pages() {
   $page->menu = array();
   $page->arguments = array(
     'keywords' => array(
-      'id' => 1,
-      'identifier' => 'String',
-      'name' => 'string',
-      'settings' => array(
-        'use_tail' => 0,
-      ),
+      'settings' => array(),
+      'identifier' => 'No context',
     ),
   );
   $page->conf = array(
@@ -60,7 +56,16 @@ function gsb_feature_club_default_page_manager_pages() {
     'pipeline' => 'ipe',
     'css_id' => 'solr-search-panel',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      1 => array(
+        'identifier' => 'Query string value',
+        'keyword' => 'Keywords',
+        'name' => 'query_string',
+        'key' => 'keywords',
+        'fallback_value' => '',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'plugins' => array(),
@@ -82,7 +87,7 @@ function gsb_feature_club_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Club page';
+  $display->title = 'Alphabetical by Club Name for all clubs';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -110,10 +115,52 @@ function gsb_feature_club_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'contentmain';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:4';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'context_query_string_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'view_mode' => 'Full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['contentmain'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'search_clubs-club_search';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'context_query_string_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'view_mode' => 'teaser',
       'widget_title' => NULL,
@@ -137,22 +184,44 @@ function gsb_feature_club_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['contentmain'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'contentmain';
-    $pane->type = 'token';
-    $pane->subtype = 'facetapi_results:keys';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'club_filters-club_list';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '0',
+          ),
+          'context' => 'context_query_string_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
-      'sanitize' => 1,
-      'context' => 'argument_string_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -160,19 +229,19 @@ function gsb_feature_club_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['contentmain'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-Wb0fHtLJ9mIttcB0bx6bLJtQK1x2jQKg';
+    $pane->subtype = 'views--exp-club_filters-club_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => 'argument_string_1',
+      'inherit_path' => 1,
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -184,8 +253,8 @@ function gsb_feature_club_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar'][0] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

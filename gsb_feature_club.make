@@ -6,3 +6,14 @@ projects[email][subdir] = contrib
 
 projects[entity_view_mode][version] = 1.0-beta3
 projects[entity_view_mode][subdir] = contrib
+
+; Add context filter by query in url
+projects[ctools_query_string_context][version] = 1.x-dev
+projects[ctools_query_string_context][subdir] = contrib
+projects[ctools_query_string_context][download][type] = git
+projects[ctools_query_string_context][download][revision] = dc75839
+projects[ctools_query_string_context][download][branch] = 7.x
+
+; Better exposed filters for checkbox in views
+projects[better_exposed_filters][version] = 3.0-beta3
+projects[better_exposed_filters][subdir] = contrib
