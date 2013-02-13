@@ -18,3 +18,7 @@ projects[ctools_query_string_context][subdir] = custom/modules
 ; Better exposed filters for checkbox in views
 projects[better_exposed_filters][version] = 3.0-beta3
 projects[better_exposed_filters][subdir] = contrib
+
+; Load more functionality for views
+projects[views_load_more][version] = 1.1
+projects[views_load_more][subdir] = contrib
