@@ -20,5 +20,9 @@ projects[better_exposed_filters][version] = 3.0-beta3
 projects[better_exposed_filters][subdir] = contrib
 
 ; Load more functionality for views
-projects[views_load_more][version] = 1.1
+projects[views_load_more][type] = module
+projects[views_load_more][download][type] = git
+projects[views_load_more][download][url] = http://git.drupal.org/project/views_load_more.git
+projects[views_load_more][download][revision] = 2f367c5
+projects[views_load_more][download][branch] = 7.x
 projects[views_load_more][subdir] = contrib
