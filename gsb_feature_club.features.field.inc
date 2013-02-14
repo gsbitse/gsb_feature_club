@@ -70,6 +70,12 @@ function gsb_feature_club_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -141,6 +147,12 @@ function gsb_feature_club_field_default_fields() {
           'weight' => 13,
         ),
         'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -234,6 +246,12 @@ function gsb_feature_club_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -305,6 +323,12 @@ function gsb_feature_club_field_default_fields() {
           'weight' => 15,
         ),
         'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -391,6 +415,12 @@ function gsb_feature_club_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -458,6 +488,12 @@ function gsb_feature_club_field_default_fields() {
           'weight' => 14,
         ),
         'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -543,6 +579,12 @@ function gsb_feature_club_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -623,6 +665,12 @@ function gsb_feature_club_field_default_fields() {
           'weight' => 6,
         ),
         'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',

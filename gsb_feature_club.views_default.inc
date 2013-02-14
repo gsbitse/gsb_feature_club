@@ -111,8 +111,92 @@ function gsb_feature_club_views_default_views() {
   $handler->display->display_options['filters']['field_club_category_tid']['id'] = 'field_club_category_tid';
   $handler->display->display_options['filters']['field_club_category_tid']['table'] = 'field_data_field_club_category';
   $handler->display->display_options['filters']['field_club_category_tid']['field'] = 'field_club_category_tid';
+  $handler->display->display_options['filters']['field_club_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_club_category_tid']['expose']['operator_id'] = 'field_club_category_tid_op';
-  $handler->display->display_options['filters']['field_club_category_tid']['expose']['label'] = 'Filter';
+  $handler->display->display_options['filters']['field_club_category_tid']['expose']['label'] = 'Club Category (field_club_category)';
+  $handler->display->display_options['filters']['field_club_category_tid']['expose']['operator'] = 'field_club_category_tid_op';
+  $handler->display->display_options['filters']['field_club_category_tid']['expose']['identifier'] = 'field_club_category_tid';
+  $handler->display->display_options['filters']['field_club_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_club_category_tid']['vocabulary'] = 'panopoly_categories';
+
+  /* Display: club-list */
+  $handler = $view->new_display('panel_pane', 'club-list', 'club_list');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'designed-box';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['waypoint']['infinite'] = 0;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Club Category */
+  $handler->display->display_options['fields']['field_club_category']['id'] = 'field_club_category';
+  $handler->display->display_options['fields']['field_club_category']['table'] = 'field_data_field_club_category';
+  $handler->display->display_options['fields']['field_club_category']['field'] = 'field_club_category';
+  $handler->display->display_options['fields']['field_club_category']['label'] = '';
+  $handler->display->display_options['fields']['field_club_category']['element_label_colon'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_club_description']['id'] = 'field_club_description';
+  $handler->display->display_options['fields']['field_club_description']['table'] = 'field_data_field_club_description';
+  $handler->display->display_options['fields']['field_club_description']['field'] = 'field_club_description';
+  $handler->display->display_options['fields']['field_club_description']['label'] = '';
+  $handler->display->display_options['fields']['field_club_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_club_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_club_description']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Content: Club Image */
+  $handler->display->display_options['fields']['field_club_image']['id'] = 'field_club_image';
+  $handler->display->display_options['fields']['field_club_image']['table'] = 'field_data_field_club_image';
+  $handler->display->display_options['fields']['field_club_image']['field'] = 'field_club_image';
+  $handler->display->display_options['fields']['field_club_image']['label'] = '';
+  $handler->display->display_options['fields']['field_club_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_club_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_club_image']['settings'] = array(
+    'image_style' => 'gsb_image_small',
+    'image_link' => '',
+  );
+  /* Field: Content: URL */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['label'] = '';
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'gsb_club' => 'gsb_club',
+  );
+  /* Filter criterion: Content: Club Category (field_club_category) */
+  $handler->display->display_options['filters']['field_club_category_tid']['id'] = 'field_club_category_tid';
+  $handler->display->display_options['filters']['field_club_category_tid']['table'] = 'field_data_field_club_category';
+  $handler->display->display_options['filters']['field_club_category_tid']['field'] = 'field_club_category_tid';
+  $handler->display->display_options['filters']['field_club_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_club_category_tid']['expose']['operator_id'] = 'field_club_category_tid_op';
+  $handler->display->display_options['filters']['field_club_category_tid']['expose']['label'] = 'Filter by';
   $handler->display->display_options['filters']['field_club_category_tid']['expose']['operator'] = 'field_club_category_tid_op';
   $handler->display->display_options['filters']['field_club_category_tid']['expose']['identifier'] = 'field_club_category_tid';
   $handler->display->display_options['filters']['field_club_category_tid']['expose']['multiple'] = TRUE;
@@ -125,11 +209,6 @@ function gsb_feature_club_views_default_views() {
   );
   $handler->display->display_options['filters']['field_club_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_club_category_tid']['vocabulary'] = 'panopoly_categories';
-
-  /* Display: club-list */
-  $handler = $view->new_display('panel_pane', 'club-list', 'club_list');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: clubs-by-tag */
