@@ -122,8 +122,9 @@ function gsb_feature_club_views_default_views() {
   /* Display: club-list */
   $handler = $view->new_display('panel_pane', 'club-list', 'club_list');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'designed-box';
+  $handler->display->display_options['css_class'] = 'view-club-filters designed-box';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
@@ -132,6 +133,7 @@ function gsb_feature_club_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['waypoint']['infinite'] = 0;
+  $handler->display->display_options['pager']['options']['more_button_text'] = 'show more';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -425,9 +427,59 @@ function gsb_feature_club_views_default_views() {
   /* Display: search-clubs-list */
   $handler = $view->new_display('panel_pane', 'search-clubs-list', 'club_search');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view-club-filters designed-box';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['waypoint']['infinite'] = 0;
+  $handler->display->display_options['pager']['options']['more_button_text'] = 'show more';
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Node: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_club_index';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_club_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Description */
+  $handler->display->display_options['fields']['field_club_description']['id'] = 'field_club_description';
+  $handler->display->display_options['fields']['field_club_description']['table'] = 'search_api_index_club_index';
+  $handler->display->display_options['fields']['field_club_description']['field'] = 'field_club_description';
+  $handler->display->display_options['fields']['field_club_description']['label'] = '';
+  $handler->display->display_options['fields']['field_club_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_club_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_club_description']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Field: Indexed Node: Club Category */
+  $handler->display->display_options['fields']['field_club_category']['id'] = 'field_club_category';
+  $handler->display->display_options['fields']['field_club_category']['table'] = 'search_api_index_club_index';
+  $handler->display->display_options['fields']['field_club_category']['field'] = 'field_club_category';
+  $handler->display->display_options['fields']['field_club_category']['label'] = '';
+  $handler->display->display_options['fields']['field_club_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_club_category']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_club_category']['view_mode'] = 'full';
+  /* Field: Indexed Node: URL */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'search_api_index_club_index';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['label'] = '';
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Search: Fulltext search */
