@@ -43,6 +43,7 @@ features[field][] = node-gsb_club-field_main_contact_email
 features[field][] = node-gsb_club-field_main_contact_phone
 features[field][] = node-gsb_club-field_url
 features[node][] = gsb_club
+features[page_manager_pages][] = club_search_page
 features[search_api_index][] = club_index
 features[variable][] = field_bundle_settings_node__gsb_club
 features[variable][] = menu_options_gsb_club

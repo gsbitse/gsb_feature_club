@@ -12,6 +12,8 @@ function gsb_feature_club_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: variable
+  $overrides["variable.panels_page_allowed_types.value|custom-custom"] = 'custom-custom';
+  $overrides["variable.panels_page_default.value|custom"] = 'custom';
 
  return $overrides;
 }
