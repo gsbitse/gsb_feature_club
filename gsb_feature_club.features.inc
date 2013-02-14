@@ -30,18 +30,6 @@ function gsb_feature_club_views_api() {
 }
 
 /**
- * Implements hook_strongarm_alter().
- */
-function gsb_feature_club_strongarm_alter(&$data) {
-  if (isset($data['panels_page_allowed_types'])) {
-    $data['panels_page_allowed_types']->value['custom-custom'] = 'custom-custom'; /* WAS: 0 */
-  }
-  if (isset($data['panels_page_default'])) {
-    $data['panels_page_default']->value['custom'] = 'custom'; /* WAS: 0 */
-  }
-}
-
-/**
  * Implements hook_node_info().
  */
 function gsb_feature_club_node_info() {
